@@ -112,7 +112,7 @@ body {
 }
 
 .container {
-  width: 1770px;
+  max-width: 1770px;
   margin: 0 auto;
 }
 
@@ -168,59 +168,77 @@ body {
   outline-offset: 2px;
 }
 
-.nav {
+.header__nav {
   gap: 85px;
 }
 
-.nav__list {
+.header__nav-list {
   gap: 85px;
   font-size: 18px;
   font-weight: 600;
   line-height: normal;
 }
 
-.nav__link {
+.header__nav-link {
+  position: relative;
   transition: color 0.3s ease-in-out;
 }
 
-.nav__link:hover {
+.header__nav-link::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  padding-bottom: 1.4em;
+  width: 100%;
   border-bottom: 2px solid var(--color-02);
+  opacity: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out,
+  opacity 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
-.nav__link:focus-visible {
+.header__nav-link:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.header__nav-link:focus-visible {
   outline: none;
   outline: 2px solid var(--color-02);
   outline-offset: 5px;
 }
 
-.nav__link:active {
-  border-bottom: 2px solid var(--color-04);
+.header__nav-link:active {
   color: var(--color-04);
 }
 
-.search {
+.header__nav-link:active::after {
+  border-color: var(--color-04);
+}
+
+.header__search {
   font-size: 0;
 }
 
-.search__svg__fill {
+.header__search-svg-fill {
   fill: #000;
   transition: fill 0.3s ease-in-out;
 }
 
-.search__svg__stroke {
+.header__search-svg-stroke {
   stroke: #000;
   transition: stroke 0.3s ease-in-out;
 }
 
-.search .search__svg:hover .search__svg__fill {
+.header__search .header__search-svg:hover .header__search-svg-fill {
   fill: var(--color-02);
 }
 
-.search .search__svg:hover .search__svg__stroke {
+.header__search .header__search-svg:hover .header__search-svg-stroke {
   stroke: var(--color-02);
 }
 
-.search:focus-visible {
+.header__search:focus-visible {
   outline: none;
   outline: 2px solid var(--color-02);
   outline-offset: 2px;
@@ -288,7 +306,7 @@ body {
   width: calc((100% - (var(--gap) * var(--offsets))) / (var(--offsets) + 1));
 }
 
-.about-us__cards__left {
+.about-us__cards-left {
   flex-direction: column;
   justify-content: flex-end;
   border-radius: 32px;
@@ -299,7 +317,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.cards__left {
+.cards-left {
   border-radius: 32px;
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: space-between;
@@ -308,7 +326,7 @@ body {
   padding-right: 51px;
 }
 
-.cards__left__descr {
+.cards-left__descr {
   color: var(--color-01);
   font-size: 16px;
   font-weight: 700;
@@ -316,30 +334,30 @@ body {
   max-width: 435px;
 }
 
-.cards__left__btn {
+.cards-left__btn {
   background-color: rgba(0, 0, 0, 0);
   border: 3px solid var(--color-02);
   transition: border 0.3s ease-in-out,
     background-color 0.3s ease-in-out;
 }
 
-.cards__left__btn:focus-visible,
-.cards__left__btn:hover {
+.cards-left__btn:focus-visible,
+.cards-left__btn:hover {
   outline: none;
   background-color: var(--color-02);
 }
 
-.cards__left__btn:active {
+.cards-left__btn:active {
   border: 3px solid var(--color-04);
   background-color: var(--color-04);
 }
 
-.about-us__cards__right {
+.about-us__cards-right {
   flex-direction: column;
   gap: var(--gap);
 }
 
-.card__right {
+.card-right {
   border-radius: 32px;
   outline: 1px solid #CACACA;
   background-position: 59px center;
@@ -347,23 +365,23 @@ body {
   padding: 65px 110px 65px 298px;
 }
 
-.card_01 {
+.card-01 {
   background-image: url('../img/about-us_01.svg');
 
 }
 
-.card_02 {
+.card-02 {
   background-image: url('../img/about-us_02.svg');
 }
 
-.card__right__title {
+.card-right__title {
   font-size: 24px;
   font-weight: 700;
   line-height: normal;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
-.card__right__descr {
+.card-right__descr {
   font-size: 16px;
   font-weight: 400;
   line-height: 32px;
@@ -379,7 +397,7 @@ margin-bottom: 102px;
 }
 
 .stages__descr {
-  --offsest: 1;
+  --offsets: 1;
   gap: var(--gap);
   justify-content: space-between;
 }
@@ -441,8 +459,6 @@ margin-bottom: 102px;
 }
 
 .stages__img {
-  min-width: 870px;
-  min-height: 460px;
   background-image: url('../img/stages.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -542,22 +558,22 @@ margin-bottom: 102px;
   gap: 25px;
 }
 
-.social__link path {
+.footer__link path {
   fill: #666666;
   transition: fill 0.3s ease-in-out;
 }
 
-.social__link:focus-visible {
+.footer__link:focus-visible {
   outline: none;
   outline: 2px solid var(--color-02);
   outline-offset: 5px;
 }
 
-.social__link:hover path {
+.footer__link:hover path {
   fill: var(--color-02);
 }
 
-.social__link:active path {
+.footer__link:active path {
   fill: var(--color-04);
 }
 
