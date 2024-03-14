@@ -123,6 +123,11 @@ body {
   padding: 18px 34px;
 }
 
+.title {
+  font-weight: 400;
+  font-size: 48px;
+}
+
 /* header */
 .header {
   border-radius: 0px 0px 32px 32px;
@@ -165,4 +170,42 @@ body {
 .header-menu__search-svg-stroke {
   stroke: #000;
   transition: stroke 0.3s ease-in-out;
+}
+
+/* main */
+/* hero */
+.hero__contant {
+  border-radius: 32px;
+  background-image: url('../img/hero_back.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 100px 80px;
+  margin-bottom: 52px;
+}
+
+.hero__title {
+  font-size: 70px;
+  font-weight: 800;
+  line-height: normal;
+  margin-bottom: 23px;
+  max-width: 840px;
+}
+
+.hero__descr {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 90px;
+  max-width: 840px;
+}
+
+.hero__button {
+  color: #fff;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: normal;
+  padding: 25px 39px;
+  background-color: #FF9900;
 }
