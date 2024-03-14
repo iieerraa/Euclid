@@ -11,16 +11,25 @@
 </head>
 <body>
   <header class="header">
-    <div class="header-contant container">
+    <div class="header-contant container flex">
       <a class="header-contant__logo" href="#"><img src="img/logo_black.png" alt="Euclid logo"></a>
-      <nav class="header-contant__menu header-menu">
-        <ol class="header-menu__list">
+      <nav class="header-contant__menu header-menu flex">
+        <ol class="header-menu__list flex">
           <li class="header-menu__item"><a class="header-menu__link" href="#about-us">О&nbsp;нас</a></li>
           <li class="header-menu__item"><a class="header-menu__link" href="#stages">Этапы</a></li>
           <li class="header-menu__item"><a class="header-menu__link" href="#questions">Вопросы</a></li>
           <li class="header-menu__item"><a class="header-menu__link" href="#">Оставить заявку</a></li>
         </ol>
-        <a class="header-menu__search" href="#">Поиск</a>
+        <a class="header-menu__search" href="#">
+          <svg class="header-menu__search-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+          fill="none">
+          <rect class="header-menu__search-svg-fill" width="7.56126" height="1.89031"
+            transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" />
+            <path class="header-menu__search-svg-stroke"
+            d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z"
+            stroke-width="2" />
+          </svg>
+        </a>
       </nav>
     </div>
   </header>
@@ -93,42 +102,48 @@
   </main>
 
   <footer class="footer">
-    <div class="footer__menu">
-      <a href="#" class="footer__logo"><img class="footer__logo-img" src="img/logo_white.png" alt="Euclid logo"></a>
-      <nav class="footer__nav">
-        <ol class="footer__menu">
-          <li class="footer__menu-item"><a href="#" class="footer__menu-link">О&nbsp;нас</a></li>
-          <li class="footer__menu-item"><a href="#" class="footer__menu-link">Проекты</a></li>
-          <li class="footer__menu-item"><a href="#" class="footer__menu-link">Отзывы</a></li>
-          <li class="footer__menu-item"><a href="#" class="footer__menu-link">Договор&nbsp;оферты</a></li>
-          <li class="footer__menu-item"><a href="#" class="footer__menu-link">Договор&nbsp;подряда</a></li>
-          <li class="footer__menu-item"><a href="#" class="footer__menu-link">Конфиденциальность</a></li>
-          <li class="footer__menu-item"><a href="#" class="footer__menu-link">Партнёрское&nbsp;соглашение</a></li>
-        </ol>
-      </nav>
-      <div class="footer__social">
-        <a href="#" class="footer__social-ok">ОК</a>
-        <a href="#" class="footer__social-vk">ВК</a>
+    <div class="footer__contant container">
+      <section class="footer__menu">
+        <a href="#" class="footer__logo"><img class="footer__logo-img" src="img/logo_white.png" alt="Euclid logo"></a>
+        <nav class="footer__nav">
+          <ol class="footer__menu">
+            <li class="footer__menu-item"><a href="#" class="footer__menu-link">О&nbsp;нас</a></li>
+            <li class="footer__menu-item"><a href="#" class="footer__menu-link">Проекты</a></li>
+            <li class="footer__menu-item"><a href="#" class="footer__menu-link">Отзывы</a></li>
+            <li class="footer__menu-item"><a href="#" class="footer__menu-link">Договор&nbsp;оферты</a></li>
+            <li class="footer__menu-item"><a href="#" class="footer__menu-link">Договор&nbsp;подряда</a></li>
+            <li class="footer__menu-item"><a href="#" class="footer__menu-link">Конфиденциальность</a></li>
+            <li class="footer__menu-item"><a href="#" class="footer__menu-link">Партнёрское&nbsp;соглашение</a></li>
+          </ol>
+        </nav>
+        <div class="footer__social">
+          <a href="#" class="footer__social-ok">ОК</a>
+          <a href="#" class="footer__social-vk">ВК</a>
+        </div>
+      </section>
+
+      <section class="footer__form-request">
+        <h2 class="footer__form-title">Оставить заявку</h2>
+        <form action="" class="footer__form">
+          <input class="footer__form-name" type="text" id="name" name="name" placeholder="Фамилия, имя и&nbsp;отчество*" autocomplete="given-name" required>
+          <input class="footer__form-mail" type="email" id="email" name="email" placeholder="Email*" autocomplete="off" required>
+          <textarea class="footer__form-textarea" id="message" name="message" rows="4" placeholder="Сообщение"
+            required></textarea>
+            <div class="footer__form-check flex">
+              <button class="footer__form-btn btn" type="submit">Отправить данные</button>
+              <label class="checkbox flex">
+                <input class="checkbox__input" type="checkbox" id="consent" name="consent" required>
+                <span class="checkbox__box"></span>
+                <span class="checkbox__agreement">Согласен на обработку данных</span>
+              </label>
+            </div>
+          </form>
+        </section>
+
+        <section class="footer__descr">
+          <p class="footer__descr-text">Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение модели развития. Таким образом, консультация с&nbsp;широким активом обеспечивает широкому кругу (специалистов) участие в&nbsp;формировании стандартных подходов.</p>
+        </section>
       </div>
-    </div>
-    <div class="footer__form-request">
-      <h2 class="footer__form-title">Оставить заявку</h2>
-      <form action="" class="footer__form">
-        <input class="footer__form-name" type="text" id="name" name="name" placeholder="Фамилия, имя и&nbsp;отчество*" autocomplete="given-name" required>
-        <input class="footer__form-mail" type="email" id="email" name="email" placeholder="Email*" autocomplete="off" required>
-        <textarea class="footer__form-textarea" id="message" name="message" rows="4" placeholder="Сообщение"
-          required></textarea>
-          <div class="footer__form-check flex">
-            <button class="footer__form-btn btn" type="submit">Отправить данные</button>
-            <label class="checkbox flex">
-              <input class="checkbox__input" type="checkbox" id="consent" name="consent" required>
-              <span class="checkbox__box"></span>
-              <span class="checkbox__agreement">Согласен на обработку данных</span>
-            </label>
-          </div>
-        </form>
-      </div>
-      <p class="footer__descr">Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение модели развития. Таким образом, консультация с&nbsp;широким активом обеспечивает широкому кругу (специалистов) участие в&nbsp;формировании стандартных подходов.</p>
     </footer>
 </body>
 </html>
