@@ -217,6 +217,9 @@ body {
 }
 
 /* about-us */
+.about-us {
+  margin-bottom: 104px;
+}
 .about-us__text {
   max-width: 1235px;
   font-weight: 400;
@@ -299,4 +302,85 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 32px;
+}
+
+/* stages */
+.stages {
+  margin-bottom: 102px;
+}
+.stages__title {
+  margin-bottom: 42px;
+}
+
+.stages__cards{
+  --offsets: 1;
+  gap: var(--gap);
+}
+
+.stages__card {
+  width: calc((100% - (var(--gap) * var(--offsets))) / (var(--offsets) + 1));
+}
+
+.cards-stages__left {
+  flex-direction: column;
+}
+
+.cards-stages__left-title {
+  font-weight: 700;
+  font-size: 24px;
+
+  margin-top: -6px;
+  margin-bottom: 10px;
+}
+
+.cards-stages__left-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  max-width: 758px;
+  margin-bottom: 18px;
+}
+
+.cards-stages__left-buttons {
+  gap: 32px;
+}
+
+.button-stages__about {
+  color: #fff;
+  padding: 20px 38px;
+  background: #f90;
+}
+
+.button-stages__contract {
+  outline: 1px solid #000;
+  padding: 20px 36px;
+  background: #fff;
+}
+
+.cards-stages__right {
+  background-image: url(/img/stages.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* questions */
+.questions__cards {
+  --offsets: 2;
+  gap: var(--gap);
+}
+
+.questions__card {
+  width: calc((100% - (var(--gap) * var(--offsets))) / (var(--offsets) + 1));
+}
+
+.questions__quest {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.questions__answer {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
 }
