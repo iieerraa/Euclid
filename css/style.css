@@ -125,7 +125,6 @@ body {
 .title {
   font-weight: 400;
   font-size: 48px;
-  margin-bottom: 20px;
 }
 
 .card {
@@ -220,6 +219,11 @@ body {
 .about-us {
   margin-bottom: 104px;
 }
+
+.about-us__title {
+  margin-bottom: 20px;
+}
+
 .about-us__text {
   max-width: 1235px;
   font-weight: 400;
@@ -365,6 +369,14 @@ body {
 }
 
 /* questions */
+.questions {
+  margin-bottom: 100px;
+}
+
+.questions__title {
+  margin-bottom: 33px;
+}
+
 .questions__cards {
   --offsets: 2;
   gap: var(--gap);
@@ -372,15 +384,28 @@ body {
 
 .questions__card {
   width: calc((100% - (var(--gap) * var(--offsets))) / (var(--offsets) + 1));
+  padding: 65px;
+  padding-left: 60px;
 }
 
 .questions__quest {
   font-weight: 700;
   font-size: 24px;
+  line-height: 120%;
+  margin-bottom: 8px;
 }
 
 .questions__answer {
   font-weight: 400;
   font-size: 16px;
   line-height: 200%;
+}
+
+/* footer */
+.footer {
+  background: #000;
+}
+
+.footer__contant {
+  padding: 50px 75px;
 }
