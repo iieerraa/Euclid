@@ -202,7 +202,8 @@ body {
 }
 
 .header-menu__link:hover {
-  outline: none;
+  outline: 0 solid var(--color_02);
+  transition: outline 0.1s ease;
 }
 
 .header-menu__link:active {
@@ -219,6 +220,12 @@ body {
   font-size: 0;
 }
 
+.header-menu__search:focus-visible {
+  outline: none;
+  outline: 2px solid var(--color_01);
+  outline-offset: 3px;
+}
+
 .header-menu__search-svg-fill {
   fill: var(--color_black);
   transition: fill 0.3s ease-in-out;
@@ -227,6 +234,19 @@ body {
 .header-menu__search-svg-stroke {
   stroke: var(--color_black);
   transition: stroke 0.3s ease-in-out;
+}
+
+.header-menu__search:hover {
+  outline: 0 solid var(--color_02);
+  transition: outline 0.3s ease;
+}
+
+.header-menu__search:hover .header-menu__search-svg-fill {
+  fill: var(--color_02);
+}
+
+.header-menu__search:hover .header-menu__search-svg-stroke {
+  stroke: var(--color_02);
 }
 
 /* main */
@@ -265,7 +285,18 @@ body {
   font-weight: 700;
   line-height: normal;
   padding: 25px 39px;
+  outline: none;
   background-color: var(--color_01);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.hero__button:focus-visible,
+.hero__button:hover {
+  background-color: var(--color_02);
+}
+
+.hero__button:active {
+  background-color: var(--color_03);
 }
 
 /* about-us */
@@ -321,11 +352,24 @@ body {
   max-width: 435px;
 }
 
-.cards-about__left-button {
+.cards-about__button {
   display: inline-block;
   padding: 19px 35px;
   background-color: rgba(0, 0, 0, 0);
   border: 3px solid var(--color_01);
+  outline: none;
+  transition: background-color 0.3s ease-in-out,
+  border 0.3s ease-in-out;
+}
+
+.cards-about__button:focus-visible,
+.cards-about__button:hover {
+  background-color: var(--color_01);
+}
+
+.cards-about__button:active {
+  background-color: var(--color_03);
+  border: 3px solid var(--color_03);
 }
 
 .cards-about__right {
@@ -363,7 +407,7 @@ body {
 
 /* stages */
 .stages {
-  margin-bottom: 102px;
+  margin-bottom: 105px;
 }
 .stages__title {
   margin-bottom: 42px;
@@ -385,7 +429,6 @@ body {
 .cards-stages__left-title {
   font-weight: 700;
   font-size: 24px;
-
   margin-top: -6px;
   margin-bottom: 10px;
 }
@@ -395,7 +438,7 @@ body {
   font-size: 16px;
   line-height: 200%;
   max-width: 758px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .cards-stages__left-buttons {
@@ -404,14 +447,41 @@ body {
 
 .button-stages__about {
   color: var(--color_white);
-  padding: 20px 38px;
+  padding: 19px 38px;
   background: var(--color_01);
+  outline: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button-stages__about:focus-visible,
+.button-stages__about:hover {
+  background-color: var(--color_02);
+}
+
+.button-stages__about:active {
+  background-color: var(--color_03);
 }
 
 .button-stages__contract {
-  outline: 1px solid var(--color_black);
-  padding: 20px 36px;
+  border: 1px solid var(--color_black);
+  outline: none;
+  padding: 19px 36px;
   background: var(--color_white);
+  transition: background-color 0.3s ease-in-out,
+  border 0.3s ease-in-out,
+  color 0.3s ease-in-out;
+}
+
+.button-stages__contract:focus-visible,
+.button-stages__contract:hover {
+  color: var(--color_white);
+  border: 1px solid #666;
+  background-color: #666;
+}
+
+.button-stages__contract:active {
+  color: var(--color_white);
+  background-color: var(--color_black);
 }
 
 .cards-stages__right {
