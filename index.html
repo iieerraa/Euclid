@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
   <title>Евклид</title>
 </head>
 <body>
@@ -135,10 +137,10 @@
 
       <section class="footer__section footer__form-request">
         <h2 class="footer__form-title">Оставить заявку</h2>
-        <form action="" class="footer__form flex">
-          <input class="footer__form-input" type="text" id="name" name="name" placeholder="Фамилия, имя и&nbsp;отчество*" autocomplete="given-name" required>
-          <input class="footer__form-input" type="email" id="email" name="email" placeholder="Email*" autocomplete="off" required>
-          <textarea class="footer__form-input footer__form-textarea" id="message" name="message" rows="4" placeholder="Сообщение"
+        <form class="footer__form flex" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+          <input class="footer__form-input" type="text" name="name" placeholder="Фамилия, имя и&nbsp;отчество*" autocomplete="given-name" required>
+          <input class="footer__form-input" type="email" name="email" placeholder="Email*" autocomplete="off" required>
+          <textarea class="footer__form-input footer__form-textarea" name="message" rows="4" placeholder="Сообщение"
             required></textarea>
             <div class="footer__form-check flex">
               <button class="footer__form-btn btn" type="submit">Отправить данные</button>
