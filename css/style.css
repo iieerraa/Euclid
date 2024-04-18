@@ -80,7 +80,6 @@ img {
 }
 
 body {
-  min-width: 1200px;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -106,7 +105,7 @@ p {
 
 /* global */
 body {
-  background: var(--color-01);
+  background: var(--color_white);
 }
 
 .flex {
@@ -143,7 +142,7 @@ body {
   background: var(--color_white);
   box-shadow: 0px 5px 40px 0px rgba(0, 0, 0, 0.10);
   margin-bottom: 50px;
-  padding: 14px 0;
+  padding: 14px 50px;
   height: 100px;
 }
 
@@ -154,6 +153,7 @@ body {
 }
 
 .header-contant__logo {
+  max-width: 225px;
   font-size: 0;
 }
 
@@ -161,6 +161,10 @@ body {
   outline: none;
   outline: 2px solid var(--color_01);
   outline-offset: 5px;
+}
+
+.header-contant__menu {
+  align-items: center;
 }
 
 .header-contant__menu,
@@ -250,6 +254,10 @@ body {
 }
 
 /* main */
+.main {
+  padding: 0 50px;
+}
+
 /* hero */
 .hero__contant {
   border-radius: 32px;
@@ -335,6 +343,10 @@ body {
   outline: none;
 }
 
+.cards-about__left-media {
+  outline: none;
+}
+
 .cards-about__left-contant {
   justify-content: space-between;
   align-items: center;
@@ -354,7 +366,7 @@ body {
 
 .cards-about__button {
   display: inline-block;
-  padding: 19px 35px;
+  padding: 17px 35px;
   background-color: rgba(0, 0, 0, 0);
   border: 3px solid var(--color_01);
   outline: none;
@@ -465,8 +477,10 @@ body {
 .button-stages__contract {
   border: 1px solid var(--color_black);
   outline: none;
-  padding: 19px 36px;
+  padding: 19px 37px;
   background: var(--color_white);
+  font-weight: 400;
+  font-size: 16px;
   transition: background-color 0.3s ease-in-out,
   border 0.3s ease-in-out,
   color 0.3s ease-in-out;
@@ -493,7 +507,7 @@ body {
 
 /* questions */
 .questions {
-  margin-bottom: 100px;
+  margin-bottom: 99px;
 }
 
 .questions__title {
@@ -526,6 +540,7 @@ body {
 
 /* footer */
 .footer {
+  padding: 0 50px;
   background: var(--color_black);
 }
 
@@ -533,12 +548,12 @@ body {
   padding-top: 50px;
   padding-bottom: 50px;
   color: #cacaca;
-  --offsets: 2;
   gap: var(--gap);
 }
 
 .footer__section {
-  width: calc((100% - (var(--gap) * var(--offsets))) / (var(--offsets) + 1));
+  width: 100%;
+  max-width: 570px;
 }
 
 /* footer__info */
@@ -655,17 +670,24 @@ body {
 
 .footer__form-textarea {
   resize:none;
-  margin-bottom: 2px;
+  margin-bottom: 9px;
+  max-height: 150px;
 }
 
 .footer__form-check {
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  row-gap: 20px;
 }
 
 .footer__form-btn {
   margin-right: 22px;
-  padding: 19px 52px;
+  width: 100%;
+  max-width: 269px;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  /* padding: 19px 52px; */
   outline: none;
   color: var(--color_white);
   background: var(--color_01);
@@ -702,8 +724,8 @@ body {
   background-color: #000;
   box-shadow: 0 0 0 1px white;
   /* border: 1px solid white; */
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   margin-left: -18px;
 }
 
@@ -720,11 +742,19 @@ body {
   outline-offset: 2px;
 }
 
+.checkbox__agreement {
+  white-space: nowrap;
+}
+
 /* footer__descr */
 .footer__descr {
-  padding-left: 207px;
-  padding-top: 90px;
+  justify-content: flex-end;
+  align-items: center;
   font-weight: 400;
   font-size: 16px;
   line-height: 200%;
+}
+
+.footer__text {
+  max-width: 363px;
 }
