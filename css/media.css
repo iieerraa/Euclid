@@ -534,6 +534,10 @@
     margin-bottom: 20px;
   }
 
+  .footer__form-input {
+    font-size: 14px;
+  }
+
   .footer__form-textarea {
     margin-bottom: 0;
   }
